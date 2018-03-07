@@ -1,0 +1,21 @@
+multiIP:
+  build: .
+  container_name: multiIP
+  hostname: apitest
+  ports:
+    - 444:443/tcp
+  volumes:
+    - ${PWD}:/app
+  networks:
+    test:
+      ipv4_address: 10.10.10.100
+
+#networks:
+#  test:
+#    dirver: 'bridge'
+#    ipam:
+#      config:
+#        - subnet: 10.10.10.0/24
+
+#docker run -itd -p 443:443 --name test --hostname test -ip { 10.10.10.100,10.10.10.102} -v  /home/shafiq/PycharmProjects/python3:/app uzzal2k5/nginx-ssl-python3.5
+
