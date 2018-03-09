@@ -48,16 +48,9 @@ def _process_response(response):
     return text
 
 
+x = urllib.request.urlopen('https://shuni.tel/api/v1/shuni/post/')
 
-
-url = 'https://172.17.0.4/'
-#context = ssl._create_default_https_context = ssl.create_default_context()
-
-#
-#context = ssl.create_urllib3_context
-# urllib3.urlopen(url, context=context)
-# resp_data = urllib3.connection_from_url(url)
-# data = resp_data.ca_cert_dir
+url = urllib.request.Request('https://shuni.tel/api/v1/shuni/post/')
 
 
 context = ssl.create_default_context()
@@ -88,3 +81,8 @@ print(data)
 # print(info)
 # print(v_num)
 # print(hex_v_num)
+
+#r = urllib.request.urlopen(url, stream=True)
+data = urllib.request.urlopen(url)
+testdata = data.read().decode('utf-8')
+print(testdata)
