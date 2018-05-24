@@ -9,9 +9,9 @@ def query_func1(pattern_list=[], *args):
 
 # print query_pattern
 lst1 = ['extra', 'twoextra']
-sub_query1 = str(query_func1(lst1))
+# sub_query1 = str(query_func1(lst1))
 
-sql1 = "select * from (SELECT company,comment_message, comment_published FROM shuni_database.apps_comment WHERE company='Grameenphone' and comment_published between '2017-07-28T00:00:00' and '2017-07-30T00:00:00' )a WHERE " + sub_query1+" ;"
+# sql1 = "select * from (SELECT company,comment_message, comment_published FROM shuni_database.apps_comment WHERE company='Grameenphone' and comment_published between '2017-07-28T00:00:00' and '2017-07-30T00:00:00' )a WHERE " + sub_query1+" ;"
 
 #print(sql1+'\n\n\n')
 

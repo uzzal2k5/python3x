@@ -1,2 +1,4 @@
 requests
 flask
+
+pip install django-two-factor-auth
